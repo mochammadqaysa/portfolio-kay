@@ -55,16 +55,16 @@ function App() {
           </div>
           <div className="md:ml-auto animate__animated animate__fadeInUp animate__delay-4s">
             <ProfileCard
-              name="Mochammad Qaysa"
-              title="Web Developer"
-              handle="farisedrikp"
+              name="Mochammad Qaysa Al-Haq"
+              title="Mobile & Full Stack Developer"
+              handle="mochammadqaysa"
               status="Online"
-              contactText="Contact Me"
+              contactText="My Linkedin"
               avatarUrl="/assets/img/kayzz.png"
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
-              onContactClick={() => console.log('Contact clicked')}
+              onContactClick={() => window.location.href = 'https://www.linkedin.com/in/mochammadqaysaalhaq/'}
             />
           </div>
         </div>
