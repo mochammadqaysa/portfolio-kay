@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import CountUp from "./CountUp/CountUp"
 import Aurora from "../backgrounds/Aurora/Aurora"
+import GradientText from './GradientText/GradientText';
 
 const PreLoader = () => {
   const [loading, setLoading] = useState(true)
@@ -44,15 +45,23 @@ const PreLoader = () => {
           className={`absolute text-white text-6xl font-bold transition-all duration-1000 ${fadeText ? "opacity-0 -translate-y-10" : "opacity-100 translate-y-0"
             }`}
         >
-          <CountUp
-            from={0}
-            to={100}
-            separator=","
-            direction="up"
-            duration={1}
-            className="count-up-text"
-            onEnd={() => setCountDone(true)}
-          />
+          <GradientText
+            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+            animationSpeed={3}
+            showBorder={false}
+            className="custom-class"
+          >
+            <CountUp
+              from={0}
+              to={100}
+              separator=","
+              direction="up"
+              duration={1}
+              className="count-up-text"
+              onEnd={() => setCountDone(true)}
+            />
+          </GradientText>
+
         </div>
       </div>
     )
